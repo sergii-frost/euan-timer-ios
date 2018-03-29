@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupUIForSegmentedControl()
-        intervalSelected()
+        handleIntervalUpdate()
     }
     
     @IBAction func startTimer() {
@@ -71,9 +71,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func intervalSelected() {
+        handleIntervalUpdate(shouldStartTimer: true)
+    }
+    
+    fileprivate func handleIntervalUpdate(shouldStartTimer: Bool = false) {
         let selectedIntervalIndex = intervalSegmentedControl.selectedSegmentIndex
         timeLabel.maxInterval = EUInterval.lookup(byIndex: selectedIntervalIndex)?.interval
         reset()
+        if shouldStartTimer {
+            startTimer()
+        }
     }
     
     fileprivate func updateSetCountUI() {

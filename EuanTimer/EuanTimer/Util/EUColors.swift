@@ -19,6 +19,10 @@ extension UIColor {
         return UIColor(red: ~100, green: ~221, blue: ~23, alpha: 1)
     }
     
+    static func euWhiteColor() -> UIColor {
+        return UIColor.white
+    }
+    
     static func euRedColor() -> UIColor {
         //#E53935 Material: Red 600
         return UIColor(red: ~229, green: ~57, blue: ~53, alpha: 1)
