@@ -16,11 +16,15 @@ class ViewController: UIViewController {
         
     @IBOutlet weak var timeLabel: EUTimeLabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var setCountLabel: UILabel!
+    
+    fileprivate var setCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         initUI()
+        reset()
     }
 
     func initUI() {
@@ -29,6 +33,18 @@ class ViewController: UIViewController {
     
     @IBAction func startTimer() {
         timeLabel.start()
+        setCount += 1
+        updateSetCountUI()
+    }
+    
+    @IBAction func reset() {
+        timeLabel.reset()
+        setCount = 0
+        updateSetCountUI()
+    }
+    
+    fileprivate func updateSetCountUI() {
+        setCountLabel.text = "\(setCount)"
     }
 }
 
