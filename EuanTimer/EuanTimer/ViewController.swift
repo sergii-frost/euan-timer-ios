@@ -8,6 +8,36 @@
 
 import UIKit
 
+fileprivate enum EUInterval {
+    case oneAndHalfMinute
+    case twoMinutes
+    case threeMinutes
+    
+    var interval: TimeInterval {
+        switch self {
+        case .oneAndHalfMinute:
+            return TimeInterval(90)
+        case .twoMinutes:
+            return TimeInterval(120)
+        case .threeMinutes:
+            return TimeInterval(180)
+        }
+    }
+    
+    static func lookup(byIndex index: Int) -> EUInterval? {
+        switch index {
+        case 0:
+            return EUInterval.oneAndHalfMinute
+        case 1:
+            return EUInterval.twoMinutes
+        case 2:
+            return EUInterval.threeMinutes
+        default:
+            return nil
+        }
+    }
+}
+
 class ViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -17,18 +47,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLabel: EUTimeLabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var setCountLabel: UILabel!
+    @IBOutlet weak var intervalSegmentedControl: UISegmentedControl!
     
     fileprivate var setCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        initUI()
-        reset()
-    }
-
-    func initUI() {
-        timeLabel.maxInterval = 5
+        setupUIForSegmentedControl()
+        intervalSelected()
     }
     
     @IBAction func startTimer() {
@@ -43,8 +70,19 @@ class ViewController: UIViewController {
         updateSetCountUI()
     }
     
+    @IBAction func intervalSelected() {
+        let selectedIntervalIndex = intervalSegmentedControl.selectedSegmentIndex
+        timeLabel.maxInterval = EUInterval.lookup(byIndex: selectedIntervalIndex)?.interval
+        reset()
+    }
+    
     fileprivate func updateSetCountUI() {
         setCountLabel.text = "\(setCount)"
+    }
+    
+    fileprivate func setupUIForSegmentedControl() {
+        let font = UIFont.systemFont(ofSize: 20)
+        intervalSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
     }
 }
 

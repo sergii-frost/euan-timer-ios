@@ -33,4 +33,10 @@ extension UIColor {
         //#263238 Material: Blue Grey 900
         return UIColor(red: ~38, green: ~50, blue: ~56, alpha: 1)
     }
+    
+    static func euBlueGreyColor() -> UIColor {
+        //#90A4AE Material: Blue Grey 300
+        return UIColor(red: ~144, green: ~164, blue: ~174, alpha: 1)
+    }
+
 }
