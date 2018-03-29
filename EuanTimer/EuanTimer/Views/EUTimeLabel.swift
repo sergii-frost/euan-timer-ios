@@ -52,10 +52,10 @@ class EUTimeLabel: UILabel {
     
     fileprivate func updateColor(forInterval interval: TimeInterval) {
         guard let maxInterval = maxInterval else {
-            self.textColor = UIColor.euGreenColor()
+            self.textColor = UIColor.euWhiteColor()
             return
         }
-        self.textColor = Int(interval) > Int(maxInterval) ? UIColor.euRedColor() : UIColor.euGreenColor()
+        self.textColor = Int(interval) > Int(maxInterval) ? UIColor.euGreenColor() : UIColor.euWhiteColor()
     }
 }
 
