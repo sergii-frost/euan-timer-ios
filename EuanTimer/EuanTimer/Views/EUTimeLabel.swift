@@ -12,6 +12,7 @@ import UIKit
 @IBDesignable
 class EUTimeLabel: UILabel {
     
+    var maxInterval: TimeInterval?
     fileprivate var startDate: Date?
     
     var timer: Timer?
@@ -40,9 +41,19 @@ class EUTimeLabel: UILabel {
         if let startDate = self.startDate {
             let counter = Date().timeIntervalSince(startDate)
             self.text = counter.format(using: [.minute, .second])
+            updateColor(forInterval: counter)
         } else {
+            updateColor(forInterval: 0)
             self.text = "00:00"
         }
+    }
+    
+    fileprivate func updateColor(forInterval interval: TimeInterval) {
+        guard let maxInterval = maxInterval else {
+            self.textColor = UIColor.euGreenColor()
+            return
+        }
+        self.textColor = Int(interval) > Int(maxInterval) ? UIColor.euRedColor() : UIColor.euGreenColor()
     }
 }
 
