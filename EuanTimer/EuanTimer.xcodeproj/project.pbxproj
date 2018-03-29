@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		451DDEFD20655C4900BFCB40 /* EUTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451DDEFC20655C4900BFCB40 /* EUTimeLabel.swift */; };
+		453AD735206D4BF40066A98E /* EUColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453AD734206D4BF40066A98E /* EUColors.swift */; };
 		4557E748205E7D3500855F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557E747205E7D3500855F67 /* AppDelegate.swift */; };
 		4557E74A205E7D3500855F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557E749205E7D3500855F67 /* ViewController.swift */; };
 		4557E74D205E7D3500855F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4557E74B205E7D3500855F67 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		451DDEFC20655C4900BFCB40 /* EUTimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUTimeLabel.swift; sourceTree = "<group>"; };
+		453AD734206D4BF40066A98E /* EUColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUColors.swift; sourceTree = "<group>"; };
 		4557E744205E7D3500855F67 /* EuanTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuanTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4557E747205E7D3500855F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4557E749205E7D3500855F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		453AD733206D4BE40066A98E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				453AD734206D4BF40066A98E /* EUColors.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		4557E73B205E7D3500855F67 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		4557E746205E7D3500855F67 /* EuanTimer */ = {
 			isa = PBXGroup;
 			children = (
+				453AD733206D4BE40066A98E /* Util */,
 				451DDEFB20655C3100BFCB40 /* Views */,
 				4557E747205E7D3500855F67 /* AppDelegate.swift */,
 				4557E749205E7D3500855F67 /* ViewController.swift */,
@@ -148,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451DDEFD20655C4900BFCB40 /* EUTimeLabel.swift in Sources */,
+				453AD735206D4BF40066A98E /* EUColors.swift in Sources */,
 				4557E74A205E7D3500855F67 /* ViewController.swift in Sources */,
 				4557E748205E7D3500855F67 /* AppDelegate.swift in Sources */,
 			);
