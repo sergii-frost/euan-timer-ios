@@ -30,5 +30,9 @@ class ViewController: UIViewController {
     @IBAction func startTimer() {
         timeLabel.start()
     }
+    
+    @IBAction func reset() {
+        timeLabel.reset()
+    }
 }
 

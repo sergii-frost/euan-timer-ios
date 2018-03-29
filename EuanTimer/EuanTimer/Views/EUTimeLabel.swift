@@ -33,8 +33,10 @@ class EUTimeLabel: UILabel {
         return false
     }
     
-    func stop() {
-        
+    func reset() {
+        timer?.invalidate()
+        startDate = nil
+        updateUI()
     }
     
     fileprivate func updateUI() {
