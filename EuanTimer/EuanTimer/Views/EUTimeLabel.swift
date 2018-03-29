@@ -31,7 +31,7 @@ class EUTimeLabel: UILabel {
         }
         return false
     }
-        
+    
     func stop() {
         
     }

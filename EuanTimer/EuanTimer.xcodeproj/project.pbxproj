@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		451DDEFD20655C4900BFCB40 /* UITimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451DDEFC20655C4900BFCB40 /* UITimeLabel.swift */; };
+		451DDEFD20655C4900BFCB40 /* EUTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451DDEFC20655C4900BFCB40 /* EUTimeLabel.swift */; };
 		4557E748205E7D3500855F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557E747205E7D3500855F67 /* AppDelegate.swift */; };
 		4557E74A205E7D3500855F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4557E749205E7D3500855F67 /* ViewController.swift */; };
 		4557E74D205E7D3500855F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4557E74B205E7D3500855F67 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		451DDEFC20655C4900BFCB40 /* UITimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITimeLabel.swift; sourceTree = "<group>"; };
+		451DDEFC20655C4900BFCB40 /* EUTimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUTimeLabel.swift; sourceTree = "<group>"; };
 		4557E744205E7D3500855F67 /* EuanTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuanTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4557E747205E7D3500855F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4557E749205E7D3500855F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		451DDEFB20655C3100BFCB40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				451DDEFC20655C4900BFCB40 /* UITimeLabel.swift */,
+				451DDEFC20655C4900BFCB40 /* EUTimeLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				451DDEFD20655C4900BFCB40 /* UITimeLabel.swift in Sources */,
+				451DDEFD20655C4900BFCB40 /* EUTimeLabel.swift in Sources */,
 				4557E74A205E7D3500855F67 /* ViewController.swift in Sources */,
 				4557E748205E7D3500855F67 /* AppDelegate.swift in Sources */,
 			);

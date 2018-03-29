@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,29 +24,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5S-tk-a4w" customClass="EUTimeLabel" customModule="EuanTimer" customModuleProvider="target">
-                                <rect key="frame" x="127" y="40" width="120.5" height="47"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5S-tk-a4w" customClass="EUTimeLabel" customModule="EuanTimer" customModuleProvider="target">
+                                <rect key="frame" x="60" y="187.5" width="255" height="70"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="60"/>
+                                <color key="textColor" red="0.39215686917304993" green="0.86666667461395264" blue="0.090196080505847931" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vud-s7-lO1">
-                                <rect key="frame" x="165" y="95" width="44" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="151.5" y="475" width="71" height="51"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.30196079611778259" green="0.81568628549575806" blue="0.88235294818878174" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="srA-o2-zU1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.14901961386203766" green="0.19607843458652496" blue="0.21960784494876862" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="f5S-tk-a4w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1Gx-2y-ymA"/>
-                            <constraint firstItem="vud-s7-lO1" firstAttribute="top" secondItem="f5S-tk-a4w" secondAttribute="bottom" constant="8" id="55l-cQ-hWb"/>
+                            <constraint firstItem="f5S-tk-a4w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="5b0-fG-kkp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5S-tk-a4w" secondAttribute="trailing" constant="60" id="9NI-r9-abs"/>
                             <constraint firstItem="vud-s7-lO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I82-AL-mKj"/>
-                            <constraint firstItem="f5S-tk-a4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sHb-vd-6Ve"/>
+                            <constraint firstItem="f5S-tk-a4w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="2:3" id="J8z-Z9-UoR"/>
+                            <constraint firstItem="vud-s7-lO1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="3:2" id="vbt-Pd-eHH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
