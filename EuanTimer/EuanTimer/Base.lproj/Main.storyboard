@@ -24,6 +24,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set #: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2a-tV-mV7">
+                                <rect key="frame" x="16" y="36" width="56.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hm6-3O-4Wk">
+                                <rect key="frame" x="80" y="34" width="279" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" red="0.39215686917304993" green="0.86666667461395264" blue="0.090196080505847931" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="f5S-tk-a4w" customClass="EUTimeLabel" customModule="EuanTimer" customModuleProvider="target">
                                 <rect key="frame" x="60" y="176" width="255" height="93.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="80"/>
@@ -53,17 +65,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.14901961386203766" green="0.19607843458652496" blue="0.21960784494876862" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hm6-3O-4Wk" firstAttribute="centerY" secondItem="n2a-tV-mV7" secondAttribute="centerY" id="2cw-zI-sox"/>
                             <constraint firstItem="f5S-tk-a4w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="5b0-fG-kkp"/>
                             <constraint firstItem="Qix-5t-D3d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8XK-n3-Oa7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5S-tk-a4w" secondAttribute="trailing" constant="60" id="9NI-r9-abs"/>
                             <constraint firstItem="vud-s7-lO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I82-AL-mKj"/>
                             <constraint firstItem="f5S-tk-a4w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="2:3" id="J8z-Z9-UoR"/>
+                            <constraint firstItem="hm6-3O-4Wk" firstAttribute="leading" secondItem="n2a-tV-mV7" secondAttribute="trailing" constant="8" id="PQw-Vz-Ml2"/>
+                            <constraint firstItem="n2a-tV-mV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZvO-Dr-8Ap"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hm6-3O-4Wk" secondAttribute="trailing" constant="16" id="ffT-S5-1ZL"/>
+                            <constraint firstItem="n2a-tV-mV7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="u4c-vP-4H6"/>
                             <constraint firstItem="vud-s7-lO1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="3:2" id="vbt-Pd-eHH"/>
                             <constraint firstItem="Qix-5t-D3d" firstAttribute="top" secondItem="vud-s7-lO1" secondAttribute="bottom" constant="8" id="yAP-Jj-ihb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="setCountLabel" destination="hm6-3O-4Wk" id="N1B-vP-jB0"/>
                         <outlet property="startButton" destination="vud-s7-lO1" id="tL8-QG-MGE"/>
                         <outlet property="timeLabel" destination="f5S-tk-a4w" id="OU5-RT-NCb"/>
                     </connections>
