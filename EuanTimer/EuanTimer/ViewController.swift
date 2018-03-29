@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+        
     @IBOutlet weak var timeLabel: EUTimeLabel!
     @IBOutlet weak var startButton: UIButton!
     
@@ -21,7 +24,7 @@ class ViewController: UIViewController {
     }
 
     func initUI() {
-        
+        timeLabel.maxInterval = 5
     }
     
     @IBAction func startTimer() {
