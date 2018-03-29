@@ -62,6 +62,21 @@
                                     <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="nBP-fE-l1i"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="t82-ZL-xdk">
+                                <rect key="frame" x="16" y="403" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VMv-Ls-Ykx"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1:30"/>
+                                    <segment title="2:00"/>
+                                    <segment title="3:00"/>
+                                </segments>
+                                <color key="tintColor" red="0.56470590829849243" green="0.64313727617263794" blue="0.68235296010971069" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="intervalSelected" destination="BYZ-38-t0r" eventType="valueChanged" id="Cnk-dG-E7z"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.14901961386203766" green="0.19607843458652496" blue="0.21960784494876862" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -69,11 +84,14 @@
                             <constraint firstItem="f5S-tk-a4w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="5b0-fG-kkp"/>
                             <constraint firstItem="Qix-5t-D3d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8XK-n3-Oa7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5S-tk-a4w" secondAttribute="trailing" constant="60" id="9NI-r9-abs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t82-ZL-xdk" secondAttribute="trailing" constant="16" id="BZ9-Ca-GtE"/>
                             <constraint firstItem="vud-s7-lO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I82-AL-mKj"/>
                             <constraint firstItem="f5S-tk-a4w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="2:3" id="J8z-Z9-UoR"/>
                             <constraint firstItem="hm6-3O-4Wk" firstAttribute="leading" secondItem="n2a-tV-mV7" secondAttribute="trailing" constant="8" id="PQw-Vz-Ml2"/>
                             <constraint firstItem="n2a-tV-mV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZvO-Dr-8Ap"/>
+                            <constraint firstItem="vud-s7-lO1" firstAttribute="top" secondItem="t82-ZL-xdk" secondAttribute="bottom" constant="32" id="bh3-yD-8Q7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hm6-3O-4Wk" secondAttribute="trailing" constant="16" id="ffT-S5-1ZL"/>
+                            <constraint firstItem="t82-ZL-xdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jTZ-Z1-4DN"/>
                             <constraint firstItem="n2a-tV-mV7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="u4c-vP-4H6"/>
                             <constraint firstItem="vud-s7-lO1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="3:2" id="vbt-Pd-eHH"/>
                             <constraint firstItem="Qix-5t-D3d" firstAttribute="top" secondItem="vud-s7-lO1" secondAttribute="bottom" constant="8" id="yAP-Jj-ihb"/>
@@ -81,6 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="intervalSegmentedControl" destination="t82-ZL-xdk" id="lia-W0-yZx"/>
                         <outlet property="setCountLabel" destination="hm6-3O-4Wk" id="N1B-vP-jB0"/>
                         <outlet property="startButton" destination="vud-s7-lO1" id="tL8-QG-MGE"/>
                         <outlet property="timeLabel" destination="f5S-tk-a4w" id="OU5-RT-NCb"/>
